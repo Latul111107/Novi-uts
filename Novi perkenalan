@@ -1,0 +1,30 @@
+class Mahasiswa:
+    nim = 0
+    nama = ""
+    asal = ""
+
+    def perkenalan(self):
+        print(f"Halo, nama saya {self.nama}, NIM saya {self.nim}, saya dari {self.asal}.")
+
+    def sapa_teman(self, nama_teman):
+        print(f"Senang bertemu denganmu, {nama_teman}!")
+
+# Membuat objek mahasiswa
+novi = Mahasiswa()
+sinta = Mahasiswa()
+
+# Mengisi data dengan input pengguna
+novi.nama = input("Masukkan nama mahasiswa 1: ")
+novi.nim = input("Masukkan NIM mahasiswa 1: ")
+novi.asal = input("Asal mahasiswa 1: ")
+
+sinta.nama = input("Masukkan nama mahasiswa 2: ")
+sinta.nim = input("Masukkan NIM mahasiswa 2: ")
+sinta.asal = input("Asal mahasiswa 2: ")
+
+# Memanggil method perkenalan dan sapaan
+novi.perkenalan()
+novi.sapa_teman(sinta.nama)
+
+sinta.perkenalan()
+sinta.sapa_teman(novi.nama)
